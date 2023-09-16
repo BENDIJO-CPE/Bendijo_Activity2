@@ -41,11 +41,12 @@ public void searchAuthor(String targetAuthor){
                 System.out.println("♥ Author: " + current.author + ", Title: " + current.title + ", ISBN: " + current.ISBN + "\n" );
                 current = current.next;
             }
-        }
                 if(!found){
                 System.out.println("Author is UNKNOWN");
+                current = current.next;
                 }
         }
+}
     
 
 public void searchTitle(String targetTitle) {
@@ -59,11 +60,12 @@ public void searchTitle(String targetTitle) {
                 System.out.println("♥ Author: " + current.author + ", Title: " + current.title + ", ISBN: " + current.ISBN + "\n" );
                 current = current.next;
             }
-        }
         if (!found){
                 System.out.println("THERES NO SUCH TITLE OF THE BOOK");
+                current = current.next;
         }
        }
+}
 
 public void searchIsbn(String targetIsbn) {
         Node current = head;
@@ -76,10 +78,11 @@ public void searchIsbn(String targetIsbn) {
                 System.out.println("♥ Author: " + current.author + ", Title: " + current.title + ", ISBN: " + current.ISBN + "\n");
                 current = current.next;
             }
-        }
                 if (!found){
             System.out.println("ISBN is not FOUND");
+            current = current.next;
             }
+    }
 }
 
    public void display(){
